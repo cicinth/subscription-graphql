@@ -1,0 +1,16 @@
+type Venda{
+    id: ID!
+    produto: String!
+    valor: Float!
+}
+type Mutation{
+    realizarVenda(produto:String!,valor: Float!):Venda!
+}
+type Query {
+    status: String!
+    findAllVendas: [Venda!]!
+}
+
+type Subscription {
+    novaVenda: Venda!
+  }
